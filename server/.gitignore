@@ -1,0 +1,11 @@
+# Ignore OS system file
+.DS_Store
+
+# Ignore node_modules folder
+node_modules
+
+#Ignore files related to API keys
+.env
+
+#Ignore package-lock.json
+package-lock.json
