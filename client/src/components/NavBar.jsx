@@ -1,4 +1,6 @@
 import { Avatar, Badge, Box, IconButton, InputBase, styled } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { setMode } from "../state/global";
 import SearchIcon from "@mui/icons-material/Search";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -17,6 +19,13 @@ const AvatarBadge = styled(Badge) (({theme})=> ({
 }));
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+  const mode = useSelector((state) => state.global.mode);
+
+  const onClickToggleColorMode = () => {
+    dispatch(setMode(mode))
+  }
+
   return (
     <Box
       display="flex"
@@ -32,8 +41,12 @@ const NavBar = () => {
       </Box>
 
       <Box>
-        <IconButton>
-          <LightModeOutlinedIcon />
+        <IconButton onClick={onClickToggleColorMode}>
+          {mode === "light" ? (
+            <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon />
+          )}
         </IconButton>
 
         <IconButton>
