@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Dashboard from './scenes/dashboard/Dashboard.jsx'
+import Analytics from './scenes/dashboard/Analytics.jsx'
+import Calendar from './scenes/app/Calendar.jsx'
+import Contact from './scenes/team/Contact.jsx'
+import Chart from './scenes/chart/Chart.jsx'
 import './index.css'
 import { store } from "./state/store.js";
 import { Provider } from "react-redux";
@@ -16,9 +19,17 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<App />}>
-      <Route path="/" element={<Navigate to="/dashboard" />} />
-      <Route path="dashboard" element={<Dashboard />} />
-      {/* ... etc. */}
+      <Route path="/" element={<Navigate to="/dashboard/analytics" />} />
+      <Route path="dashboard">
+        <Route path="analytics" element={<Analytics />} />
+      </Route>
+      <Route path="app">
+        <Route path="calendar" element={<Calendar />} />
+      </Route>
+      <Route path="team">
+        <Route path="contact" element={<Contact />} />
+      </Route>
+      <Route path="chart" element={<Chart />}/>
     </Route>
   )
 );
