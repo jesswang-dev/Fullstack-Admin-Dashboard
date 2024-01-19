@@ -9,14 +9,20 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import SideBarHeader from "./SideBarHeader";
 
-const menuItemStyles = {};
+const menuItemStyles = {
+  button: {
+    [`&.active`]: {
+      backgroundColor: "#13395e",
+      color: "#b6c8d9",
+    },
+  },
+};
 
-
-const SideBarGroupLabel = styled(Typography) ({
+const SideBarGroupLabel = styled(Typography)({
   marginLeft: 25,
   marginTop: 10,
   fontSize: 12,
-})
+});
 
 function SideBar() {
   const [collapsed, setCollapsed] = useState(true);
@@ -27,13 +33,7 @@ function SideBar() {
           <SideBarHeader />
 
           <Menu
-            menuItemStyles={{
-              button: {[`&.active`]: {
-          backgroundColor: '#13395e',
-          color: '#b6c8d9',
-              }
-        },
-            }}
+            menuItemStyles={menuItemStyles}
             onMouseOver={() => setCollapsed(false)}
             onMouseOut={() => setCollapsed(true)}
           >
