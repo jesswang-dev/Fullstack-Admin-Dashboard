@@ -1,7 +1,9 @@
 import { useMediaQuery } from "@mui/material";
 // import BarChart from "../../components/BarChart"
 import { Box } from "@mui/system";
-import AnalyticsBox from "../../components/AnalyticsBox";
+import Row1 from "./Row1";
+import Row2 from "./Row2";
+import Row3 from "./Row3";
 
   const gridTemplateLarge = `
   "a b c"
@@ -73,26 +75,9 @@ const Analytics = () => {
               }
         }
       >
-        <AnalyticsBox gridArea={"a"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"b"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"c"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"d"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"e"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"f"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"g"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"h"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"i"}>
-        </AnalyticsBox>
-        <AnalyticsBox gridArea={"j"}>
-        </AnalyticsBox>
+        <Row1 />
+        <Row2 />
+        <Row3 />
       </Box>
     </>
   );

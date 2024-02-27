@@ -6,6 +6,8 @@ import "dotenv/config";
 import helmet from "helmet";
 import morgan from "morgan";
 import kpiRoutes from "./routes/kpis.js";
+import KPI from "./models/KPI.js";
+import { kpis } from "./data/AnalyticsData.js";
 
 /*Config */
 const app = express();
@@ -49,6 +51,8 @@ const PORT = process.env.PORT || 9000;
 
 mongoose.connect(process.env.MONGO_URL).then(async ()=> {
     app.listen(PORT, () => console.log(`Listening to server port ${PORT}`))
+    /**Add kpi data into database */
+    // KPI.insertMany(kpis);
 }).catch((error) => {
     console.log(`${error} did not connect`)
 })
