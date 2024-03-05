@@ -6,8 +6,10 @@ import "dotenv/config";
 import helmet from "helmet";
 import morgan from "morgan";
 import kpiRoutes from "./routes/kpis.js";
+import productRoutes from "./routes/product.js"
+import Product from "./models/Product.js";
 import KPI from "./models/KPI.js";
-import { kpis } from "./data/AnalyticsData.js";
+import { products, kpis } from "./data/AnalyticsData.js"
 
 /*Config */
 const app = express();
@@ -19,12 +21,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello World!");
+// });
 
 /* ROUTES */
 app.use("/kpi", kpiRoutes);
+app.use("/product", productRoutes);
 
 
 /* ERROR HANDLING */
@@ -51,8 +54,9 @@ const PORT = process.env.PORT || 9000;
 
 mongoose.connect(process.env.MONGO_URL).then(async ()=> {
     app.listen(PORT, () => console.log(`Listening to server port ${PORT}`))
-    /**Add kpi data into database */
+    /**Add data into database */
     // KPI.insertMany(kpis);
+    // Product.insertMany(products);
 }).catch((error) => {
     console.log(`${error} did not connect`)
 })
