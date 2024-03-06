@@ -26,10 +26,12 @@ const pieData = [
   { name: "Group B", value: 600 },
 ];
 
+/**customized dot for scatter plot */
 const scatterDot  = ({ cx, cy }) => {
   return <Dot cx={cx} cy={cy} fill="#82ca9d" r={3} />;
 }
 
+/**customized tooltip for scatter plotst */
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     //console.log(payload)
