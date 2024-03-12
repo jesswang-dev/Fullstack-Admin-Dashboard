@@ -28,7 +28,11 @@ function SideBar() {
   const [collapsed, setCollapsed] = useState(true);
   return (
     <>
-      <Sidebar collapsed={collapsed} style={{ height: "100vh" }} breakPoint="md">
+      <Sidebar
+        collapsed={collapsed}
+        style={{ height: "100vh" }}
+        breakPoint="md"
+      >
         <SideBarHeader />
 
         <Menu
@@ -40,7 +44,10 @@ function SideBar() {
             <MenuItem component={<NavLink to="/dashboard/analytics" />}>
               Analytics
             </MenuItem>
-            <MenuItem> CRM </MenuItem>
+            <MenuItem component={<NavLink to="/dashboard/crm" />}>
+              {" "}
+              CRM{" "}
+            </MenuItem>
             <MenuItem> ECommerce </MenuItem>
           </SubMenu>
 
