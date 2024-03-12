@@ -32,6 +32,7 @@ const NavBar = () => {
       justifyContent="space-between"
       alignItems="center"
       sx={{ border: "1px solid", borderRadius: 1 }}
+      mb={2}
     >
       <Box>
         <IconButton>

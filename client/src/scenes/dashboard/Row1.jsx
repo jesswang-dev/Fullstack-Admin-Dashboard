@@ -66,13 +66,13 @@ const Row1 = () => {
           subtitle="The area graph represents revenue and expenses each month of 2023"
           sideText={"+4%"}
         />
-        <ResponsiveContainer width="100%" height="80%">
+        <ResponsiveContainer width="100%" height="70%">
           <AreaChart
-            width={500}
-            height={400}
+            width={400}
+            height={300}
             data={revenueExpenses}
             margin={{
-              top: 10,
+              top: 30,
               right: 30,
               left: 0,
               bottom: 0,
@@ -122,16 +122,16 @@ const Row1 = () => {
           subtitle="The line graph represents profit and revenue each month of 2023"
           sideText={"+4%"}
         />
-        <ResponsiveContainer width="100%" height="80%">
+        <ResponsiveContainer width="100%" height="70%">
           <LineChart
-            width={500}
-            height={400}
+            width={400}
+            height={300}
             data={revenueProfit}
             margin={{
-              top: 5,
-              right: 20,
+              top: 30,
+              right: 0,
               left: 0,
-              bottom: 5,
+              bottom: 0,
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
@@ -176,7 +176,7 @@ const Row1 = () => {
             height={400}
             data={revenueByMonth}
             margin={{
-              top: 10,
+              top: 50,
               right: 30,
               left: 0,
               bottom: 0,

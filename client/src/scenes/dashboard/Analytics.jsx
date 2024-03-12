@@ -65,12 +65,12 @@ const Analytics = () => {
           isAboveMediumScreen
             ? {
                 gridTemplateAreas: gridTemplateLarge,
-                gridTemplateColumns: "repeat(3, minmax(370px, 1fr))",
-                gridTemplateRows: "repeat(10, minmax(60px, 1fr))",
+                gridTemplateColumns: "repeat(3, minmax(300px, 1fr))",
+                gridTemplateRows: "repeat(10, minmax(80px, 1fr))",
               }
             : {
                 gridTemplateAreas: gridTemplateMedium,
-                gridAutoColumns: "1fr",
+                gridAutoColumns: "100%",
                 gridAutoRows: "80px",
               }
         }

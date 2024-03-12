@@ -5,7 +5,6 @@ import { deepPurple } from "@mui/material/colors";
 const StyledSidebarHeader = styled(Box)({
     width: "100%",
     height: 64,
-    // backgroundColor: "aqua",
     padding: "0 20px",
     display: "flex",
     alignItems: "center",

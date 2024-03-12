@@ -93,7 +93,7 @@ const Row2 = () => {
             height={400}
             data={operationalAndNonOpreational}
             margin={{
-              top: 5,
+              top: 30,
               right: 20,
               left: 0,
               bottom: 5,
@@ -105,11 +105,16 @@ const Row2 = () => {
               tickLine={false}
               style={{ fontSize: "10px" }}
             />
-            <YAxis yAxisId="left" style={{ fontSize: "10px" }} />
+            <YAxis
+              yAxisId="left"
+              style={{ fontSize: "10px" }}
+              domain={[2000, 11000]}
+            />
             <YAxis
               yAxisId="right"
               style={{ fontSize: "10px" }}
               orientation="right"
+              domain={[2000, 11000]}
             />
             <Tooltip />
             <Legend wrapperStyle={{ fontSize: "12px" }} />
@@ -172,7 +177,8 @@ const Row2 = () => {
         </FlexBetween>
       </AnalyticsBox>
       <AnalyticsBox gridArea={"f"}>
-        <ResponsiveContainer width="100%" height="100%">
+        <BoxHeader title="Product Price vs. Expense" />
+        <ResponsiveContainer width="100%" height="80%">
           <ScatterChart
             margin={{
               top: 20,
@@ -202,7 +208,11 @@ const Row2 = () => {
               tickFormatter={(v) => `$${v}`}
             />
             <Tooltip content={<CustomTooltip />} />
-            <Scatter name="Price and Expense Ratio" data={pricesAndExpenses} shape={scatterDot}/>
+            <Scatter
+              name="Price and Expense Ratio"
+              data={pricesAndExpenses}
+              shape={scatterDot}
+            />
           </ScatterChart>
         </ResponsiveContainer>
       </AnalyticsBox>
