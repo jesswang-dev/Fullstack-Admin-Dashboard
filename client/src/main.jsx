@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Analytics from './scenes/dashboard/Analytics.jsx'
-import { CRM } from './scenes/dashboard/CRM.jsx'
+import Crm from './scenes/dashboard/CRM.jsx'
 import Calendar from './scenes/app/Calendar.jsx'
 import Contact from './scenes/team/Contact.jsx'
 import Chart from './scenes/chart/Chart.jsx'
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Navigate to="/dashboard/analytics" />} />
       <Route path="dashboard">
         <Route path="analytics" element={<Analytics />} />
-        {/* <Route path="crm" element={<CRM />} /> */}
+        <Route path="crm" element={<Crm />} />
       </Route>
       <Route path="app">
         <Route path="calendar" element={<Calendar />} />
