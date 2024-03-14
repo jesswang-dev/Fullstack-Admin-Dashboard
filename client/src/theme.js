@@ -29,7 +29,7 @@ export const getDesignTokens = (mode) => ({
   },
   typography: {
     fontFamily: ["Inter", "sans-serif"].join(","),
-    fontSize: 14,
+    fontSize: 12,
     h1: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 40,

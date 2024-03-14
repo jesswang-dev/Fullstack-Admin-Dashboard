@@ -7,11 +7,11 @@ function BoxHeader ({title, subtitle, sideText}) {
       <FlexBetween margin="0.8rem 1rem 0 1rem">
         <FlexBetween>
           <Box width="100%">
-            <Typography variant="h4" mb="-0.1rem">{title}</Typography>
-            <Typography variant="h6">{subtitle}</Typography>
+            <Typography variant="h5" mb="-0.1rem">{title}</Typography>
+            <Typography variant="body2">{subtitle}</Typography>
           </Box>
         </FlexBetween>
-        <Typography variant="h5" fontWeight="700" color="secondary">{sideText}</Typography>
+        <Typography variant="h6" fontWeight="700" color="secondary">{sideText}</Typography>
       </FlexBetween>
     </>
   );

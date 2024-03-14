@@ -68,12 +68,12 @@ const Row3 = () => {
 
   return (
     <>
-      <AnalyticsBox gridArea={"g"}>
+      <AnalyticsBox gridArea={"g"} maxHeight={350}>
         <BoxHeader
           title="List of Products"
           sideText={`${productData ? productData.length : 0} products`}
         />
-        <Box width="100%" height={100}>
+        <Box width="100%" height="80%">
           <DataGrid
             columnHeaderHeight={35}
             rowheight={35}
@@ -83,14 +83,14 @@ const Row3 = () => {
           />
         </Box>
       </AnalyticsBox>
-      <AnalyticsBox gridArea={"h"}>
+      <AnalyticsBox gridArea={"h"} maxHeight={480}>
         <BoxHeader
           title="Recent Transactions"
           sideText={`${
             transactionData ? transactionData.length : 0
           } latest entries`}
         />
-        <Box width="100%" height={100}>
+        <Box width="100%" height="85%">
           <DataGrid
             columnHeaderHeight={35}
             rowheight={35}
@@ -102,7 +102,7 @@ const Row3 = () => {
       </AnalyticsBox>
       <AnalyticsBox gridArea={"i"}>
         <BoxHeader title="Expense Breakdown By Category" sideText={"+4%"} />
-        <FlexBetween>
+        <FlexBetween mt={"1rem"}>
           {pieChartData
             ? pieChartData.map((data, i) => {
                 return (
@@ -125,7 +125,10 @@ const Row3 = () => {
                         ))}
                       </Pie>
                     </PieChart>
-                    <Typography variant="h6">{data[0].name}</Typography>
+                    <Typography variant="h6" textAlign={"center"}>
+                      {data[0].name[0].toLocaleUpperCase() +
+                        data[0].name.slice(1)}
+                    </Typography>
                   </Box>
                 );
               })
@@ -137,15 +140,22 @@ const Row3 = () => {
           title="Overall Summary and Explanation Data"
           sideText={"+18%"}
         />
-        <Box height={15} borderRadius="1rem" bgcolor={"#cfcdef"}>
+        <Box
+          height={15}
+          borderRadius="1rem"
+          bgcolor={"#cfcdef"}
+          margin="0.8rem 1rem 0 1rem"
+        >
           <Box
             height={15}
             width={"40%"}
             borderRadius="1rem"
             bgcolor={"#8884d8"}
           ></Box>
+        </Box>
 
-          <Typography variant="h6">
+        <Box margin="0.8rem 1rem 0 1rem">
+          <Typography variant="body2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             hendrerit imperdiet justo in lobortis. Proin eget ornare nisi, a
             lacinia neque. Aliquam augue libero, elementum et porttitor sed,
