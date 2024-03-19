@@ -30,7 +30,7 @@ function SideBar() {
     <>
       <Sidebar
         collapsed={collapsed}
-        style={{ height: "100vh" }}
+        style={{height: "100%"}}
         breakPoint="md"
       >
         <SideBarHeader />

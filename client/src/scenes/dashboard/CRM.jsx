@@ -1,5 +1,4 @@
-import { Grid, Box } from "@mui/material"
-import { styled } from "@mui/material"
+import { Grid, Box, styled } from "@mui/material"
 
 const CrmBox = styled(Box)(({ theme }) => ({
   borderRadius: 5,
