@@ -1,11 +1,12 @@
 import Prediction from "./Prediction";
 
+
 function Chart() {
   return (
     <>
-      <Prediction></Prediction>
+      <Prediction />
     </>
   );
 }
 
-export default Chart
+export default Chart;
